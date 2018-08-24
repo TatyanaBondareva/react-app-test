@@ -11,7 +11,7 @@ class App extends Component {
   }
   constructor() {
     super();
-    this.state = {name: 'tanya', points: '', win: 'no'};
+    this.state = {name: 'tanya', points: '', win: 'no', list: []};
   }
   typeNumber(event) {
     event.preventDefault();
@@ -48,4 +48,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
