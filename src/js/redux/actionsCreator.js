@@ -17,9 +17,10 @@ export function createMember(member) {
 export function addMember(arg) {
 	let members;
 	console.log('list.length', arg);
-	if (arg > 1) {
+	if (arg.length > 1) {
 		//console.log('list.length', store.getState().list);
-	members = sort(arg);
+	members = sort(store.getState().list);
+	console.log('sort', members);
 }
 else {
 	members = arg;
