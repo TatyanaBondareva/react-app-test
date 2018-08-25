@@ -29,7 +29,9 @@ else {
 
 }
 export function getMembers() {
-	if(localStorage.getItem('list') != null)
-		store.dispatch({type: GET_MEMBERS, list: JSON.parse(localStorage.list)});
+	if(localStorage.getItem('list') != null) {
+		let members = sort(JSON.parse(localStorage.list));
+		store.dispatch({type: GET_MEMBERS, list: members});
+	}
 	console.log('store.getState().list', store.getState().list);
 }

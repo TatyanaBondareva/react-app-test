@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import {createMember, getMembers, addMember} from '../redux/actionsCreator.js';
 import '../../assets/styles/App.sass';
-import { Provider, connect } from 'react-redux';
-import { createStore } from 'redux';
+import { connect } from 'react-redux'
 import { store } from '../redux/store.js';
-import { mapStateToProps } from '../redux/mapStateToProps.js';
 import { Form } from '../components/Form.js';
 import { Member } from '../components/Member.js';
-
-const App = connect(mapStateToProps)(
-class extends Component {
+class Main extends Component {
   componentWillMount() {
    getMembers();
  }
@@ -34,8 +30,7 @@ addMemberInList() {
   }
 
   render() {
-    return (
-        <div className="app">
+    return <div className="app">
         <header className="app-header">
           <h1 className="app-title">Welcome to React</h1>
         </header>
@@ -52,7 +47,11 @@ addMemberInList() {
           points = {this.state.points}
         />
         </div>
-      );
   }
-});
-export default App;
+}
+function mapStateToProps (state) {
+  return {
+    list: state.list
+  }
+}
+export default connect(mapStateToProps)(Main);
