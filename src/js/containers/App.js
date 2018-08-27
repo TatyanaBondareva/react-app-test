@@ -1,58 +1,25 @@
 import React, { Component } from 'react';
 import {createMember, getMembers, addMember} from '../redux/actionsCreator.js';
 import '../../assets/styles/App.sass';
-import { Provider, connect } from 'react-redux';
-import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import { store } from '../redux/store.js';
-import { mapStateToProps } from '../redux/mapStateToProps.js';
+import { FormContainer } from './FormContainer.js';
 import { Form } from '../components/Form.js';
-import { Member } from '../components/Member.js';
+import { ListContainer } from './ListContainer.js';
 
-const App = connect(mapStateToProps)(
-class extends Component {
-  componentWillMount() {
-   getMembers();
- }
- constructor() {
-  super();
-  this.state = {name: 'tanya', points: '', win: 'no', list: []};
+class App extends Component {
+componentWillMount() {
+getMembers();
 }
-typeNumber(event) {
-  event.preventDefault();
-  //  this.state.points = event.target.value;
-  this.setState({points: event.target.value});
-  console.log(this.state.points);
+render() {
+return <div className="app">
+  <div className="app_container">
+    <FormContainer />
+    <Provider store={store}>
+      <ListContainer />
+    </Provider>
+  </div>
+</div>
 }
-typeName(event) {
-  event.preventDefault();
-  this.setState({name: event.target.value});
-  console.log(this.state.name);
 }
-addMemberInList() {
-    createMember(this.state)             /////error///
-    console.log('store', store.getState());
-  }
-
-  render() {
-    return (
-        <div className="app">
-        <header className="app-header">
-          <h1 className="app-title">Welcome to React</h1>
-        </header>
-        <Form 
-          name = {this.state.name}
-          points = {this.state.points}
-          typeName = {this.typeName.bind(this)} 
-          typeNumber = {this.typeNumber.bind(this)}
-          addMemberInList = {this.addMemberInList.bind(this)}
-        />
-
-        <Member
-          name = {this.state.name}
-          points = {this.state.points}
-        />
-        </div>
-      );
-  }
-});
 export default App;
