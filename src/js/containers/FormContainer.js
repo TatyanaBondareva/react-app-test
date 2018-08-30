@@ -20,9 +20,10 @@ typeName(event) {
   this.setState({name: event.target.value});
   console.log(this.state.name);
 }
-addMemberInList(event) {
+addMemberInList() {
     createMember(this.state)             /////error///
     console.log('store', store.getState());
+    this.forceUpdate();
   }
 
   render() {
