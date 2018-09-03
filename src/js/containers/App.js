@@ -4,6 +4,7 @@ import '../../assets/styles/App.sass';
 import { Provider } from 'react-redux';
 import { store } from '../redux/store.js';
 import { FormContainer } from './FormContainer.js';
+import { Menu } from '../components/Menu.js';
 import { Form } from '../components/Form.js';
 import { ListContainer } from './ListContainer.js';
 
@@ -13,6 +14,7 @@ getMembers();
 }
 render() {
 return <div className="app">
+<Menu />
   <div className="app_container">
     <FormContainer />
     <Provider store={store}>

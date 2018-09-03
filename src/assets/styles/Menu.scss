@@ -1,0 +1,81 @@
+.app__menu_container {
+display: flex;
+flex-direction: column;
+background-color: #fff;
+padding: 76px 50px;
+align-items: center;
+}
+@keyframes blink { 
+
+from {
+
+box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.15), 0 0 0px 5px rgba(0, 0, 0, 0.05);
+
+}
+
+50%{
+
+box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.15), 0 0 0px 8px rgba(0, 0, 0, 0.05);
+
+}
+
+to{
+
+box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.15), 0 0 0px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+}
+.menu__button__pink {
+width: 64px;
+height: 64px;
+background-color: #f7517b;
+border-radius: 50%;
+-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.15), 0 0 0px 10px rgba(0, 0, 0, 0.05);
+animation: blink 1s linear infinite;
+border: .5px solid rgba(0,0,0,0.15);
+margin-bottom: 138px;
+}
+#radio__star ~ label.radio__star{
+background-image: url(../img/star_grey.png);
+}
+#radio__diamond ~ label.radio__diamond{
+background-image: url(../img/diamond_grey.png);
+}
+#radio__anchor ~ label.radio__anchor{
+background-image: url(../img/anchor_grey.png);
+}
+#radio__cup ~ label.radio__cup{
+background-image: url(../img/cup_grey.png);
+}
+.radio__cup, .radio__star {
+width: 24px;
+height: 21px;
+}
+.radio__diamond {
+    width: 28px;
+    height: 23px;
+}
+.radio__anchor {
+    width: 25px;
+    height: 25px;
+}
+#radio__star:checked ~ label.radio__star{
+background-image: url(../img/star_pink.png);
+}
+#radio__diamond:checked ~ label.radio__diamond{
+background-image: url(../img/diamond_pink.png);
+}
+#radio__anchor:checked ~ label.radio__anchor{
+background-image: url(../img/anchor_pink.png);
+}
+#radio__cup:checked ~ label.radio__cup{
+background-image: url(../img/cup_pink.png);
+}
+.menu__radio {
+	    margin-bottom: 110px;
+}
+input.radio__dnone {
+display: none;
+}

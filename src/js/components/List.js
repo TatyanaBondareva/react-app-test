@@ -8,7 +8,7 @@ export class List extends Component {
         				<ul className="app__list">
         					{this.props.listOfMembers }
         				</ul>
-        				<div>{this.props.blockOfToggles}</div>
+        				<div className="app__toggles">{this.props.blockOfToggles}</div>
         			</div>
         		
 	}

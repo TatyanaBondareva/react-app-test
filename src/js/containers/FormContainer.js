@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {createMember, getMembers, addMember} from '../redux/actionsCreator.js';
 import { Form } from '../components/Form.js';
 import '../../assets/styles/App.sass';
+import '../../assets/styles/Form.scss';
+import { ListContainer } from './ListContainer.js';
 
 
 export class FormContainer extends Component {
@@ -20,10 +22,12 @@ typeName(event) {
   this.setState({name: event.target.value});
   console.log(this.state.name);
 }
-addMemberInList() {
-    createMember(this.state)             /////error///
-    console.log('store', store.getState());
-    this.forceUpdate();
+addMemberInList(event) {
+  event.preventDefault();
+  if(this.state.name != null && this.state.name != "" && this.state.points != "" && this.state.points > 0) {
+    createMember(this.state)  
+    getMembers(); 
+    }          /////error///
   }
 
   render() {

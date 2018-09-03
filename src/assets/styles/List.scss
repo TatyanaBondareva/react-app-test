@@ -1,0 +1,73 @@
+.app__list {
+    list-style: none;
+    padding: 15px 20px;
+    min-height: 595px;
+}
+.list__member__show {
+border: 2px solid #efedf7;
+margin-bottom: 8px;
+border-radius: 3px;
+position: relative;
+padding: 22px 20px 18px;
+}
+.member__name {
+font-size: 21px;
+color: rgb(119,125,145);
+font-family: "Tahoma";
+}
+.toggle__label {
+    width: 16px;
+    height: 16px;
+    background-color: #dad7f1;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    margin-right: 12px;
+}
+.toggle__radio:checked ~ .toggle__label {
+    width: 18px;
+    height: 18px;
+    background-color: #847ad1;
+    border-radius: 50%;
+}
+.toggle__radio, .list__member__hide, .member__no_prize {
+    display: none;
+}
+.member__points {
+    font-size: 18px;
+    color: rgb(193,197,212);
+    font-family: "Tahoma";
+    -webkit-font-smoothing: antialiased;
+}
+.member__prize {
+	width: 66px;
+    height: 66px;
+    background-repeat: no-repeat;
+    right: 18px;
+    top: 10px;
+    position: absolute;
+    &:before {
+    	content: "";
+    	width: 50px;
+		background-image: url(../img/cup_white.png);
+		background-repeat: no-repeat;
+    	height: 50px;
+    	position: absolute;
+    	    top: 16px;
+    left: 7px;
+    }
+}
+.member__first {
+    background-image: url(../img/Shape1.png);
+}
+.member__second {
+    background-image: url(../img/Shape2.png);
+}
+.member__third {
+    background-image: url(../img/Shape3.png);
+}
+.app__toggles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
