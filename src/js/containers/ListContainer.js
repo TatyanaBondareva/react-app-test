@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {createMember, getMembers, addMember} from '../redux/actionsCreator.js';
 import '../../assets/styles/List.scss';
-import '../../assets/styles/App.sass';
+import '../../assets/styles/App.scss';
 import { Provider, connect } from 'react-redux';
 import { store } from '../redux/store.js';
 import { mapStateToProps } from '../redux/mapStateToProps.js';
@@ -18,25 +18,22 @@ export const ListContainer = connect(mapStateToProps)(
       let blockOfToggles = [];
       let count;
       (this.props.list.length > 6)?((this.props.list.length%6 != 0)?(count = parseInt(this.props.list.length/6+1)):(count = parseInt(this.props.list.length/6))):(count = parseInt(this.props.list.length/6-1));
-      console.log("count", count);
       for (var i = 0, j = 0; i < count; i++, j=j+6) {
         let checked;
         (i == 0)?(checked = true):(checked = false);
         blockOfToggles.push(<div htmlFor={"toggle" + i} key={i}><input type="radio" id={"toggle" + i} name="block_of_toggles" onClick={this.getListShow.bind(this, j, j+5)} className="toggle__radio" defaultChecked={checked}/><label htmlFor={"toggle" + i} className="toggle__label"></label></div> 
          );
       }
-      console.log("blockOfToggles", blockOfToggles);
       return blockOfToggles;
     }
     checkListEmpty(list) {
-      let classNameOfText = '';
+      let classNameOfText = 'list__text__empty';
       if(list.length > 0) {
         classNameOfText = 'member__no_prize';
       }
       return classNameOfText;
     }
     getListShow(arg, arg1) {
-     console.log(arg, arg1, this.props.list.lenght);
      this.setState({numberOfFirstVisibleMember: arg});
      this.setState({numberOfLastVisibleMember: arg1});
    }
@@ -44,17 +41,17 @@ export const ListContainer = connect(mapStateToProps)(
     let status;
     switch(number) {
       case 0:
-      status = 'member__prize member__first';
-      break;
+        status = 'member__prize member__first';
+        break;
       case 1:
-      status = 'member__prize member__second';
-      break;
+        status = 'member__prize member__second';
+        break;
       case 2:
-      status = 'member__prize member__third';
-      break;
+        status = 'member__prize member__third';
+        break;
       default:
-      status = 'member__no_prize';
-      break;
+        status = 'member__no_prize';
+        break;
     }
     return status;
   }
@@ -72,12 +69,9 @@ export const ListContainer = connect(mapStateToProps)(
       <div className={status}></div>
       </li>
     });
-    console.log(listOfMembers);
-   // this.checkListEmpty(listOfMembers);
     return listOfMembers;
   }
   render() {
-    console.log('=',this.props.list);
     this.toggleMembers();
     return (
       <List

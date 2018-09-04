@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {createMember, getMembers, addMember} from '../redux/actionsCreator.js';
-import '../../assets/styles/App.sass';
+import '../../assets/styles/App.scss';
 import { Provider } from 'react-redux';
 import { store } from '../redux/store.js';
 import { FormContainer } from './FormContainer.js';

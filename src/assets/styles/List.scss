@@ -4,16 +4,16 @@
     min-height: 595px;
 }
 .list__member__show {
-border: 2px solid #efedf7;
-margin-bottom: 8px;
-border-radius: 3px;
-position: relative;
-padding: 22px 20px 18px;
+    border: 2px solid #efedf7;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    position: relative;
+    padding: 22px 20px 18px;
 }
 .member__name {
-font-size: 21px;
-color: rgb(119,125,145);
-font-family: "Tahoma";
+    font-size: 21px;
+    color: rgb(119,125,145);
+    font-family: "Tahoma";
 }
 .toggle__label {
     width: 16px;
@@ -49,13 +49,13 @@ font-family: "Tahoma";
     &:before {
     	content: "";
     	width: 50px;
-		background-image: url(../img/cup_white.png);
-		background-repeat: no-repeat;
-    	height: 50px;
-    	position: absolute;
-    	    top: 16px;
-    left: 7px;
-    }
+      background-image: url(../img/cup_white.png);
+      background-repeat: no-repeat;
+      height: 50px;
+      position: absolute;
+      top: 16px;
+      left: 7px;
+  }
 }
 .member__first {
     background-image: url(../img/Shape1.png);
@@ -70,4 +70,13 @@ font-family: "Tahoma";
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.list__text__empty {
+    font-size: 21px;
+    color: #777d91;
+    font-family: "Tahoma";
+    -webkit-font-smoothing: antialiased;
+    padding: 50% 0;
+    display: flex;
+    justify-content: center;
 }

@@ -1,10 +1,58 @@
-.form__button__arrow {
-    width: 18px;
-    height: 18px;
-    background-image: url(../img/arrow.png);
-    background-color: #7ad18a;
-        align-self: center;
-    border-radius: 50%;
-    background-position: 1px 5px;
-    background-size: 100%;
+.form_container__header {
+	padding: 23px 0px 30px 23px;
+	font-size: 24px;
+	color: rgb(255,255,255);
+	font-family: "Tahoma";
+	-webkit-font-smoothing: antialiased;
 }
+.form_container__header__green {
+	background-color: #7ad18a;
+	padding-right: 138px;
+}
+.form_container__header__violet {
+	background-color: #8379d1;
+	padding-right: 276px;
+}
+.app__form {
+	display: flex; flex-direction: column;
+	padding: 100px 32px 0px;
+}
+
+.form__label {
+	font-size: 21px;
+	color: rgb(119,145,129);
+	font-family: "Tahoma";
+	-webkit-font-smoothing: antialiased;
+	margin-bottom: 17px;
+}
+.form__input {
+	border-radius: 3px;
+	border: 2px solid #efedf7;
+	font-size: 21px; 
+	padding: 16px 21px;
+	color: rgb(119,125,145);
+	outline: none;
+	font-weight: 300;
+	margin-bottom: 45px;
+}	
+.form__button {
+	align-self: flex-end;
+	display: flex; background-color: #fff;
+	border: none;
+	font-size: 21px;
+	color: rgb(122,209,138);
+	font-family: "Tahoma";
+	-webkit-font-smoothing: antialiased; outline: none; cursor: pointer;
+	}	
+
+.form__button__arrow {
+	width: 18px;
+		height: 18px;
+		background-image: url(../img/arrow.png);
+		background-color: #7ad18a;
+		border-radius: 50%;
+		background-position: 1px 6px;
+		background-size: 100%;
+		margin-left: 14px;
+		align-self: center;
+	}

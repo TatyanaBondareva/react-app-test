@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {createMember, getMembers, addMember} from '../redux/actionsCreator.js';
 import { Form } from '../components/Form.js';
-import '../../assets/styles/App.sass';
+import '../../assets/styles/App.scss';
 import '../../assets/styles/Form.scss';
 import { ListContainer } from './ListContainer.js';
 
@@ -13,21 +13,19 @@ export class FormContainer extends Component {
 }
 typeNumber(event) {
   event.preventDefault();
-  //  this.state.points = event.target.value;
   this.setState({points: event.target.value});
-  console.log(this.state.points);
 }
 typeName(event) {
   event.preventDefault();
   this.setState({name: event.target.value});
-  console.log(this.state.name);
 }
 addMemberInList(event) {
   event.preventDefault();
   if(this.state.name != null && this.state.name != "" && this.state.points != "" && this.state.points > 0) {
     createMember(this.state)  
     getMembers(); 
-    }          /////error///
+    this.setState({name: '', points: '' });
+    }         
   }
 
   render() {
