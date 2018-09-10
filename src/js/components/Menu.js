@@ -14,7 +14,7 @@ export class Menu extends Component {
                     <label htmlFor="radio__diamond" className="menu__radio radio__diamond"></label>
                     <input type="radio" name="app__menu"  id="radio__anchor" className="radio__dnone"/>
                     <label htmlFor="radio__anchor" className="menu__radio radio__anchor"></label>
-        			</div>
+        		</div>
         		
 	}
 }

@@ -1,14 +1,14 @@
 .app__list {
     list-style: none;
-    padding: 15px 20px;
+    padding: 8px 30px;
     min-height: 595px;
 }
 .list__member__show {
     border: 2px solid #efedf7;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     border-radius: 3px;
     position: relative;
-    padding: 22px 20px 18px;
+    padding: 21px 30px 29px;
 }
 .member__name {
     font-size: 21px;
@@ -16,8 +16,8 @@
     font-family: "Tahoma";
 }
 .toggle__label {
-    width: 16px;
-    height: 16px;
+    width: 11px;
+    height: 11px;
     background-color: #dad7f1;
     border-radius: 50%;
     display: flex;
@@ -25,8 +25,8 @@
     margin-right: 12px;
 }
 .toggle__radio:checked ~ .toggle__label {
-    width: 18px;
-    height: 18px;
+    width: 11px;
+    height: 11px;
     background-color: #847ad1;
     border-radius: 50%;
 }
@@ -43,8 +43,8 @@
 	width: 66px;
     height: 66px;
     background-repeat: no-repeat;
-    right: 18px;
-    top: 10px;
+    right: 22px;
+    top: 18px;
     position: absolute;
     &:before {
     	content: "";
@@ -68,6 +68,7 @@
 }
 .app__toggles {
     display: flex;
+    margin-bottom: 22px;
     justify-content: center;
     align-items: center;
 }

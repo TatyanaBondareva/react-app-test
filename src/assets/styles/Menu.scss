@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
-	padding: 76px 50px;
+	padding: 62px 37px;
 	align-items: center;
 }
 @keyframes blink { 
@@ -26,8 +26,8 @@
 	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.15), 0 0 0px 10px rgba(0, 0, 0, 0.05);
 	animation: blink 1s linear infinite;
-	border: .5px solid rgba(0,0,0,0.15);
-	margin-bottom: 138px;
+	cursor: pointer;
+	margin-bottom: 125px;
 	outline: none;
 }
 #radio__star ~ label.radio__star{
@@ -67,7 +67,7 @@
 	background-image: url(../img/cup_pink.png);
 }
 .menu__radio {
-	margin-bottom: 110px;
+	margin-bottom: 93px;
 	cursor: pointer;
 }
 input.radio__dnone {
@@ -85,7 +85,7 @@ input.radio__dnone {
 		width: 100%;
 	}
 }
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 414px) {
 	.app_container {
 		flex-direction: column;
 	}
@@ -103,4 +103,21 @@ input.radio__dnone {
 	.app__menu_container {
 		padding: 35px 50px;
 	}
+}
+@media screen and (max-width: 375px) {
+	.member__prize {
+		right: 5px;
+	}
+	.app__menu_container {
+    padding: 35px 16px;
+}
+.app__list {
+    padding: 8px 12px;
+}
+.app__form {
+    padding: 94px 12px 0px;
+}
+.app .app_container .app__form_container .form_container__header__green {
+    padding-right: 50px;
+}
 }

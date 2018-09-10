@@ -1,9 +1,11 @@
 .form_container__header {
-	padding: 23px 0px 30px 23px;
-	font-size: 24px;
-	color: rgb(255,255,255);
+	padding: 19px 0px 23px 34px;
+	color: white;
 	font-family: "Tahoma";
+	font-size: 24px;
 	-webkit-font-smoothing: antialiased;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 .form_container__header__green {
 	background-color: #7ad18a;
@@ -15,16 +17,19 @@
 }
 .app__form {
 	display: flex; flex-direction: column;
-	padding: 100px 32px 0px;
+	padding: 94px 32px 0px;
 }
-
+.app__form_container__add_member {
+	margin-right: 41px;
+}
 .form__label {
 	font-size: 21px;
 	color: rgb(119,145,129);
 	font-family: "Tahoma";
 	-webkit-font-smoothing: antialiased;
-	margin-bottom: 17px;
+	margin-bottom: 18px;
 }
+
 .form__input {
 	border-radius: 3px;
 	border: 2px solid #efedf7;
@@ -33,7 +38,7 @@
 	color: rgb(119,125,145);
 	outline: none;
 	font-weight: 300;
-	margin-bottom: 45px;
+	margin-bottom: 57px;
 }	
 .form__button {
 	align-self: flex-end;
@@ -43,16 +48,20 @@
 	color: rgb(122,209,138);
 	font-family: "Tahoma";
 	-webkit-font-smoothing: antialiased; outline: none; cursor: pointer;
-	}	
-
+	padding: 7px 0px;
+	cursor: pointer;
+}	
 .form__button__arrow {
 	width: 18px;
-		height: 18px;
-		background-image: url(../img/arrow.png);
-		background-color: #7ad18a;
-		border-radius: 50%;
-		background-position: 1px 6px;
-		background-size: 100%;
-		margin-left: 14px;
-		align-self: center;
-	}
+	height: 18px;
+	background-image: url(../img/arrow.png);
+	background-color: #7ad18a;
+	border-radius: 50%;
+	background-position: 2px 8px;
+	background-size: 100%;
+	padding: 3px;
+	align-self: center;
+}
+.form__button > span {
+	margin-right: 18px;
+}

@@ -7,14 +7,17 @@ body {
 }
 .app_container {
 	display: flex;
-	padding: 48px 76px 50px; width: 100%;
+	padding: 53px 76px 50px;
+	margin-right: 26px;
+	width: 100%;
 }	
 .app__form_container {
 	background-color: #fff;width: 50%;
-	margin-right: 27px;
+	margin-right: 10px;
 }
 .app__menu_container {
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
 }
+
