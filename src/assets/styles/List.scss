@@ -1,7 +1,7 @@
 .app__list {
     list-style: none;
     padding: 8px 30px;
-    min-height: 595px;
+    min-height: 698px;
 }
 .list__member__show {
     border: 2px solid #efedf7;
@@ -47,8 +47,8 @@
     top: 18px;
     position: absolute;
     &:before {
-    	content: "";
-    	width: 50px;
+      content: "";
+      width: 50px;
       background-image: url(../img/cup_white.png);
       background-repeat: no-repeat;
       height: 50px;
@@ -77,7 +77,7 @@
     color: #777d91;
     font-family: "Tahoma";
     -webkit-font-smoothing: antialiased;
-    padding: 50% 0;
+    padding: 43% 0;
     display: flex;
     justify-content: center;
 }
